@@ -9,6 +9,8 @@ var express = require('express')
   , http = require('http')
   , path = require('path');
 
+ var ArticleProvider = require('./articleprovider-memory').ArticleProvider;
+
 var app = express();
 
 // all environments
