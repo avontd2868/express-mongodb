@@ -74,6 +74,6 @@ app.post('/blog/addComment', function(req, res){
 	});
 });
 
-/* listen on port 3000 */
-app.listen(3000);
-console.log('listening on port 3000');
+/* listen on port 80 for http */
+app.listen(80);
+console.log('listening on port 80');
