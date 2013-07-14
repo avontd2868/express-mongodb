@@ -32,4 +32,24 @@ app.get('/',function(req, res){
 	});
 });
 
+/* new routes for adding a new blog post */
+app.get('/blog/new', function(req, res){
+	res.render('blog_new.jade', {
+		title: 'New Post'
+
+	})
+});
+
+app.post('/blog/new', function(req, res){
+	articleProvider.save({
+		title: req.param('title'),
+		body: req.param('body')
+
+	}, function(err, docs){
+		res.redirect('/')
+	});
+});
+
+/* listen on port 3000 */
 app.listen(3000);
+console.log('listening on port 3000');

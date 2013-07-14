@@ -1,0 +1,14 @@
+//
+  template for a simple form for making new posts and redirecting back to the new list. requires this new view and two new routes in app-simple.js (one to post data, the other to return the form). this is a block comment and requires spaces after the '//'
+
+h1= title
+form( method="post")
+  div
+    div
+      span Title :
+      input(type="text", name="title", id="editArticleTitle")
+    div
+      span Body:
+      textarea( name="body", rows=20, id="editArticleBody")
+    div#editArticleSubmit
+      input(type="submit", value="Send")
