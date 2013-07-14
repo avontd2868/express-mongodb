@@ -25,7 +25,10 @@ var articleProvider = new ArticleProvider();
 
 app.get('/',function(req, res){
 	articleProvider.findAll(function(err, docs){
-		res.send(docs);
+		res.render('index.jade', {
+			title:'My Blog',
+			articles:docs
+		})
 	});
 });
 
